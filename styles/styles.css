@@ -24,6 +24,9 @@ main img {
 p {
     padding: 0;
 }
+main {
+    max-width: 800px;
+}
 
 aside {
     width: 20em;
