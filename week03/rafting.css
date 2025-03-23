@@ -1,74 +1,127 @@
+/* Define CSS Variables */
 :root {
-    --primary-color: #56494e;    /* Your chosen dark shade */
-    --secondary-color: #a29c9b; /* Complementary neutral tone */
-    --accent1-color: #db324d;   /* Vibrant red for accents */
-    --accent2-color: #A62639;   /* Deep red for attention */
-    /* Color Palette URL: https://coolors.co/f2d7ee-d3bcc0-a5668b-69306d-0e103d */
-
+    --primary-color: #56494e;    /* Dark shade for background */
+    --secondary-color: #a29c9b; /* Neutral tone for text */
+    --accent1-color: #db324d;   /* Vibrant red for highlights */
+    --accent2-color: #A62639;   /* Deep red for focus areas */
 }
 
+/* General Page Layout */
 body {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     font-family: 'Roboto', sans-serif;
     margin: 0;
+    padding: 0;
+    max-width: 1200px; /* Limiting page width for better design */
+    margin: 0 auto; /* Center the content */
     line-height: 1.6;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em 2em;
-    background-color: var(--primary-color);
+/* Heading Styles */
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
     color: var(--accent1-color);
 }
 
-header .logo img {
-    max-height: 50px;
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
 }
 
+h2 {
+    font-size: 2em;
+    margin-bottom: 0.4em;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.3em;
+}
+
+/* Paragraph Styles */
+p {
+    color: var(--secondary-color);
+    font-size: 1.1em;
+    margin-bottom: 1em;
+}
+
+/* Remove Underlines from Social Media Links */
+.social-links img {
+    text-decoration: none;
+    border: none; /* Remove any unwanted borders */
+    display: inline-block;
+}
+
+/* Navigation Styles */
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
     display: flex;
     gap: 1em;
-}
-
-nav ul li {
-    display: inline;
 }
 
 nav ul li a {
     color: var(--accent1-color);
     text-decoration: none;
+    font-weight: 700;
 }
 
-.hero {
-    text-align: center;
-    padding: 2em 1em;
-    background-color: var(--secondary-color);
-    color: white;
-}
-
-section {
-    padding: 2em 1em;
-    text-align: center;
-}
-
+/* Footer */
 footer {
-    background-color: var(--secondary-color);
+    background-color: var(--accent2-color);
     color: white;
     text-align: center;
     padding: 1em;
     margin-top: 2em;
 }
 
-button {
-    background-color: var(--accent1-color);
-    border: 2px solid var(--accent2-color);
+/* Hero Section */
+.hero {
+    position: relative; /* Enables absolute positioning of child elements */
+    background-image: url(''); /* Replace with actual path */
+    background-size: cover;
+    background-position: center;
+    width: 100%; /* Full width */
+    height: 400px; /* Adjust height as needed */
+}
+
+/* Hero Heading */
+.hero h1 {
+    position: absolute;
+    top: 20%; /* Adjust for placement */
+    left: 10%;
     color: white;
-    padding: 0.5em 1em;
-    cursor: pointer;
+    font-size: 2.5em;
+    font-family: 'Oswald', sans-serif;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Hero Article */
+.hero article {
+    position: absolute;
+    bottom: 10%; /* Adjust for placement */
+    left: 10%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+    padding: 15px;
+    max-width: 50%; /* Limit the article width */
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Article Image */
+.hero article img {
+    float: right; /* Floats the image to the right of the paragraph */
+    margin-left: 15px; /* Adds space between the image and text */
+    width: 30%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Image Styling */
+img {
+    max-width: 100%; /* Keep images responsive */
+    height: auto;
 }
