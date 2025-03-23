@@ -1,26 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="overlay.css">
-
-
+	<link rel="stylesheet" href="week03/rafting.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Whitewater Rafting Adventures</title>
+    <link rel="stylesheet" href="rafting.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main>
-	<h1>CSS Layout: Position Absolute</h1>
-	<div class="herodiv">
-		<img src="https://churchofjesuschristtemples.org/assets/img/temples/salvador-brazil-temple/salvador-brazil-temple-51668-main.jpg" alt="Placeholder image" width="700" height="300">
-		<section class="stats">
-			<h2>Brazil</h2>
-			<p>Language: <span id="lan">Portuguese</span></p>
-			<p>Size: <span id="size">8.5m km<sup>2</up></span></p>
-			<p>Visted?: <span id="visit">No</span></p>
-		</section>
-	</div>
-</main>
-<footer>Footer Content in Fixed Position with bottom set at 0 pixels.</footer>
+    <header>
+        <div class="logo">
+            <img src="https://byui-cse.github.io/wdd130-ww-course/resources/images/logos/z-wwr-blue.jpg" alt="Rafting Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#tours">Tours</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Welcome to Whitewater Rafting Adventures</h1>
+        <p>Your ultimate source for thrilling river experiences!</p>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We provide guided rafting tours for enthusiasts of all levels. Join us for an unforgettable adventure!</p>
+    </section>
+
+    <section id="tours">
+        <h2>Our Tours</h2>
+        <div class="tour">
+            <h3>Beginner's Bliss</h3>
+            <p>Perfect for newcomers to rafting. Explore mild rapids and scenic routes.</p>
+        </div>
+        <div class="tour">
+            <h3>Advanced Rapids</h3>
+            <p>For the experienced rafter, tackle Class IV and V rapids.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Whitewater Rafting Adventures. All rights reserved.</p>
+        <p>Contact us at info@raftingadventures.com</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
