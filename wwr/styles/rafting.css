@@ -76,15 +76,35 @@ footer {
     margin-top: 2em;
 }
 
-/* Hero Section */
 .hero {
-    position: relative; /* Enables absolute positioning of child elements */
-    background-image: url(''); /* Replace with actual path */
+    position: relative; /* Keep hero as the parent container */
+    background-image: url('../images/rafting58_600.jpg'); /* Replace with your actual image path */
     background-size: cover;
     background-position: center;
-    width: 100%; /* Full width */
-    height: 400px; /* Adjust height as needed */
+    height: 400px; /* Adjust the height as needed */
+    padding: 20px; /* Add padding to create space for the content */
+    color: white; /* Ensure text is readable on the background */
 }
+
+.hero h1 {
+    position: relative; /* Remove absolute positioning to prevent overlap */
+    margin-bottom: 10px; /* Add spacing below the heading */
+    font-size: 2.5em;
+}
+
+.hero article {
+    position: relative; /* Remove absolute positioning */
+    margin-top: 20px; /* Add space between the heading and article */
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background for readability */
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.hero article h2 {
+    margin-top: 0;
+    font-size: 1.8em;
+}
+
 
 /* Hero Heading */
 .hero h1 {
