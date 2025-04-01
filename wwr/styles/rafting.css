@@ -1,9 +1,9 @@
-/* Define CSS Variables */
+/* CSS Variables */
 :root {
-    --primary-color:_#56494e ;    /* Dark shade for background */
-    --secondary-color: #a29c9b; /* Neutral tone for text */
-    --accent1-color: #db324d;   /* Vibrant red for highlights */
-    --accent2-color: #A62639;   /* Deep red for focus areas */
+    --primary-color: #56494e;
+    --secondary-color: #a29c9b;
+    --accent1-color: #db324d;
+    --accent2-color: #A62639;
 }
 
 /* General Page Layout */
@@ -13,135 +13,146 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    max-width: 1200px; /* Limiting page width for better design */
-    margin: 0 auto; /* Center the content */
+    max-width: 1200px;
+    margin: 0 auto;
     line-height: 1.6;
 }
 
-/* Heading Styles */
-h1, h2, h3 {
+/* Header */
+header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border-bottom: 2px solid #ccc;
+}
+
+header .logo img {
+    width: 80px;
+    height: auto;
+}
+
+h1 {
+    font-size: 2rem;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    color: var(--accent1-color);
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background-image: url('../images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    color: white;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 2.5rem;
+}
+
+.hero article {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 5px;
+    max-width: 50%;
+}
+
+.hero article img {
+    float: right;
+    margin-left: 15px;
+    width: 30%;
+    height: auto;
+}
+
+/* History Section */
+.history {
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #f5f5f5;
+    color: #333;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+.history h2 {
+    font-size: 2rem;
     font-family: 'Oswald', sans-serif;
     color: var(--accent1-color);
 }
 
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
-}
-
-h2 {
-    font-size: 2em;
-    margin-bottom: 0.4em;
-}
-
-h3 {
-    font-size: 1.5em;
-    margin-bottom: 0.3em;
-}
-
-/* Paragraph Styles */
-p {
-    color: var(--secondary-color);
-    font-size: 1.1em;
-    margin-bottom: 1em;
-}
-
-/* Remove Underlines from Social Media Links */
-.social-links img {
-    text-decoration: none;
-    border: none; /* Remove any unwanted borders */
-    display: inline-block;
-}
-
-/* Navigation Styles */
-nav ul {
-    list-style: none;
-    padding: 0;
+/* Adventures Section */
+.adventures {
     display: flex;
-    gap: 1em;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
 }
 
-nav ul li a {
-    color: var(--accent1-color);
-    text-decoration: none;
-    font-weight: 700;
+.adventures figure {
+    text-align: center;
+    max-width: 150px;
+}
+
+.adventures img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.adventures figcaption {
+    font-size: 0.9rem;
+    margin-top: 5px;
+    color: #666;
 }
 
 /* Footer */
 footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
     background-color: var(--accent2-color);
     color: white;
-    text-align: center;
-    padding: 1em;
-    margin-top: 2em;
 }
 
-.hero {
-    position: relative; /* Keep hero as the parent container */
-    background-image: url('../images/rafting58_600.jpg'); /* Replace with your actual image path */
-    background-size: cover;
-    background-position: center;
-    height: 400px; /* Adjust the height as needed */
-    padding: 20px; /* Add padding to create space for the content */
-    color: white; /* Ensure text is readable on the background */
+footer .social-links {
+    display: flex;
+    gap: 15px;
 }
 
-.hero h1 {
-    position: relative; /* Remove absolute positioning to prevent overlap */
-    margin-bottom: 10px; /* Add spacing below the heading */
-    font-size: 2.5em;
-}
-
-.hero article {
-    position: relative; /* Remove absolute positioning */
-    margin-top: 20px; /* Add space between the heading and article */
-    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background for readability */
-    padding: 15px;
-    border-radius: 5px;
-}
-
-.hero article h2 {
-    margin-top: 0;
-    font-size: 1.8em;
-}
-
-
-/* Hero Heading */
-.hero h1 {
-    position: absolute;
-    top: 20%; /* Adjust for placement */
-    left: 10%;
-    color: white;
-    font-size: 2.5em;
-    font-family: 'Oswald', sans-serif;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-
-/* Hero Article */
-.hero article {
-    position: absolute;
-    bottom: 10%; /* Adjust for placement */
-    left: 10%;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
-    padding: 15px;
-    max-width: 50%; /* Limit the article width */
-    border-radius: 5px;
-    font-family: 'Roboto', sans-serif;
-}
-
-/* Article Image */
-.hero article img {
-    float: right; /* Floats the image to the right of the paragraph */
-    margin-left: 15px; /* Adds space between the image and text */
-    width: 30%; /* Responsive width */
-    height: auto; /* Maintain aspect ratio */
-}
-
-/* Image Styling */
-img {
-    max-width: 100%; /* Keep images responsive */
+footer .social-links img {
+    width: 30px;
     height: auto;
 }
