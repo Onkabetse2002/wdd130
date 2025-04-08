@@ -156,3 +156,10 @@ footer .social-links img {
     width: 30px;
     height: auto;
 }
+
+.employee-profiles img {
+    width: 150px; /* Adjust the width to your preferred size */
+    height: auto; /* Keeps the image's proportions */
+    border-radius: 10px; /* Optional: Adds rounded corners for a polished look */
+    margin: 10px; /* Adds space around the image */
+}
