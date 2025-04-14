@@ -1,0 +1,73 @@
+CSE 111 Proposal for a Student Chosen Program
+
+    (This is a proposal. All proposals are written with our best
+    knowledge at the beginning of a project. As we progress from the
+    beginning to the end of a project, we gain more knowledge, and we
+    change some of our proposed ideas. This is part of completing any
+    project and is fine.  However, we still must write a proposal so
+    that our teachers or supervisors know what we intend to do. Please
+    answer each of the following questions to the best of your
+    knowledge.)
+
+1. What is the title of your program?
+=Text File Word Scanner
+2. What real-world problem will your program address or help to solve?
+
+=my program tackles a common challenge: making sense of large amounts of text. 
+It can quickly analyze a file and count how often each word appears, which is
+helpful for people in different fields. Writers and researchers can use it to 
+spot patterns in their work or understand themes in literature. Businesses can 
+turn customer feedback into valuable insights by identifying repeated terms in reviews.
+Linguists or programmers might use it to process language data or prepare text for bigger
+projects. It's a practical and versatile tool that turns plain text into something meaningful
+and actionable!
+
+
+3. What will you learn from developing this program?
+
+=By developing this program, I will deepen my understanding of Python programming concepts,
+ such as working with file input/output, string manipulation, and dictionaries. I will also get
+  hands-on experience organizing code into functions, which is a valuable skill for writing clean, 
+  reusable code. Writing test functions and using pytest will strengthen my ability to test and debug
+   my programs effectively. Beyond technical skills, I will gain insight into how text analysis can be 
+   applied in real-world scenarios, preparing me to tackle larger projects or explore fields like data analysis,
+    linguistics, or natural language processing. It's a rewarding opportunity to expand both my technical abilities 
+    and problem-solving skills!
+
+4. What Python modules will your program use?
+
+    (Some examples are: csv, datetime, functools, matplotlib, math,
+    pandas, pytest, random, requests, and tkinter.)
+
+    = pathlip,string ,pytest ,collections ,
+
+5. List the names of functions you will need?
+
+    (Remember that the most reusable functions don't get user input and
+    don't print results but instead have parameters and return a result.
+    Functions that get user input and print results are important and do
+    useful work but are not easily reusable.)
+
+    (Remember also that it's hard to test functions that get user input
+    and print results. It's easy to test functions that don't get user
+    input and don't print results but instead have parameters and return
+    a result. Therefore, you should write most of your program functions
+    to have parameters and return a result.)
+
+-read_file(file_path) Reads the contents of the specified text file and returns the text as a string. This function takes the file path as a parameter and returns the content.
+
+-clean_text(text) Preprocesses the text by converting it to lowercase, removing punctuation, and splitting it into words. This function takes a string of text as input and returns a list of cleaned words.
+
+-count_words(word_list) Counts the occurrences of each word in the given list and returns a dictionary where keys are words and values are their counts. This function will be the core of your word frequency analysis.
+
+-sort_word_counts(word_counts, by_frequency=True) Sorts the word count dictionary either by frequency (default) or alphabetically and returns a sorted list of tuples. It will make the output more organized.
+
+-save_results_to_file(results, output_file) Saves the sorted word counts to a specified output text file. This helps users retain the results for further use.
+
+-display_results(results, top_n=10) Optionally prints the top N most frequent words and their counts to the console. This makes the program more interactive.
+
+-get_user_input() Handles user input, such as asking for the file path or output preferences. While not reusable, it’s essential for program interaction.
+
+6. List the names of the test functions you will write.
+
+test_clean_text() ,test_count_words(),test_sort_word_counts(),test_read_file(),test_save_results_to_file()

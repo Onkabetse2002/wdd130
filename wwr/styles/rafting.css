@@ -1,32 +1,27 @@
 /* CSS Variables */
 :root {
-    --primary-color: #56494e;
-    --secondary-color: #a29c9b;
+    --primary-color: #333;
+    --secondary-color: #ffffff;
     --accent1-color: #db324d;
     --accent2-color: #A62639;
 }
 
-/* General Page Layout */
+/* General Styles */
 body {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    max-width: 1200px;
-    margin: 0 auto;
-    line-height: 1.6;
 }
 
 /* Header */
 header {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
+    display: flex;
     align-items: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    border-bottom: 2px solid #ccc;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: var(--accent2-color);
 }
 
 header .logo img {
@@ -34,107 +29,68 @@ header .logo img {
     height: auto;
 }
 
-h1 {
-    font-size: 2rem;
-    font-family: 'Oswald', sans-serif;
-    text-align: center;
-}
-
+/* Navigation */
 nav ul {
     display: flex;
     gap: 15px;
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
+    color: var(--secondary-color);
 }
 
 nav ul li a:hover {
     color: var(--accent1-color);
-    text-decoration: underline;
 }
 
-/* Hero Section */
-.hero {
-    position: relative;
-    background-image: url('../images/hero.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-    color: white;
-}
-
-.hero h1 {
-    position: absolute;
-    top: 20%;
-    left: 10%;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 15px;
-    border-radius: 5px;
-    font-size: 2.5rem;
-}
-
-.hero article {
-    position: absolute;
-    bottom: 10%;
-    left: 10%;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 15px;
-    border-radius: 5px;
-    max-width: 50%;
-}
-
-.hero article img {
-    float: right;
-    margin-left: 15px;
-    width: 30%;
-    height: auto;
-}
-
-/* History Section */
-.history {
+/* Contact Form */
+.contact-form {
+    background-color: #444;
     padding: 20px;
-    margin: 20px auto;
-    background-color: #f5f5f5;
-    color: #333;
-    border-radius: 10px;
-    max-width: 800px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: auto;
 }
 
-.history h2 {
-    font-size: 2rem;
-    font-family: 'Oswald', sans-serif;
+.contact-form h2 {
     color: var(--accent1-color);
 }
 
-/* Adventures Section */
-.adventures {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 20px;
+.contact-form label {
+    display: block;
+    margin-top: 10px;
 }
 
-.adventures figure {
-    text-align: center;
-    max-width: 150px;
-}
-
-.adventures img {
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
     width: 100%;
+    padding: 10px;
+    margin-top: 5px;
     border-radius: 5px;
+    border: none;
 }
 
-.adventures figcaption {
-    font-size: 0.9rem;
-    margin-top: 5px;
-    color: #666;
+.contact-form button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: var(--accent1-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #c0293a;
+}
+
+/* Map */
+.map {
+    text-align: center;
+    margin-top: 20px;
 }
 
 /* Footer */
@@ -157,9 +113,11 @@ footer .social-links img {
     height: auto;
 }
 
-.employee-profiles img {
-    width: 150px; /* Adjust the width to your preferred size */
-    height: auto; /* Keeps the image's proportions */
-    border-radius: 10px; /* Optional: Adds rounded corners for a polished look */
-    margin: 10px; /* Adds space around the image */
+footer a {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: var(--accent1-color);
 }
