@@ -3,111 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Broncoh Engineering - Your Complete Engineering Partner</title>
+  <title>Broncoh Engineering</title>
   <link rel="stylesheet" href="styles/broncoh.css">
-  <script src="script/broncoh.js" defer></script>
 </head>
 <body>
-  <!-- Header -->
-  <header class="header">
-    <nav class="nav-container">
-      <!-- LOGO -->
-      <div class="logo">
-        <img src="/broncoh/images/logo.png" alt="i will put the logo here" class="logo-img">
-      </div>
-      <!-- NAV LINKS -->
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <!-- MOBILE MENU BUTTON -->
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    </nav>
+  <header>
+    <div class="logo">
+      <h1>
+        <span class="black">BRONCOH</span> <span class="orange">ENGINEERING</span>
+      </h1>
+      <p class="tagline">Your Complete Engineering Partner</p>
+    </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>BRONCOH ENGINEERING – Your Complete Engineering Partner</h1>
-      <p>Serving the mining, construction, transport, and earthmoving industries with top-quality work and precision engineering.</p>
-      <a href="#services" class="btn-primary">Explore Our Services</a>
-    </div>
-  </section>
+  <main>
+    <section class="intro">
+      <h2>BRONCOH ENGINEERING – YOUR COMPLETE ENGINEERING PARTNER! 🚀</h2>
+      <p>
+        At Broncoh Engineering, we specialise in keeping the mining, construction, 
+        transport, and earthmoving industries moving. Our fully equipped workshop 
+        and skilled team deliver top-quality work to the highest standards – every time.
+      </p>
+    </section>
 
-  <!-- Services Section -->
-  <section id="services" class="services">
-    <h2>Our Services</h2>
-    <div class="service-grid">
-      <div class="service-card">
-        <img src="https://placehold.co/200x150/ff4500/ffffff" alt="Hydraulic Cylinders">
-        <h3>Hydraulic Cylinders</h3>
-        <p>New supply, repairs & refurbishments for optimal performance.</p>
-      </div>
-      <!-- Repeat service cards as needed -->
-    </div>
-    <div class="service-note">
-      24/7 Field Service – Breakdown support anywhere you need us!
-    </div>
-  </section>
+    <section class="services">
+      <h3>🔧 OUR SERVICES INCLUDE:</h3>
+      <ul>
+        <li>Hydraulic Cylinders – New supply, repairs & refurbishments</li>
+        <li>Track Frames & Final Drives – New & refurbished, complete undercarriages</li>
+        <li>Propshafts – Manufacture, balancing & repairs for all sectors</li>
+        <li>General Engineering – Precision machining, lathe & milling work</li>
+        <li>Welding & Line Boring – On-site & workshop services</li>
+        <li>Rotary Boxes & Slide Sets – Rebuilds & servicing</li>
+        <li>Undercarriages – Full rebuilds, replacements & upgrades</li>
+        <li>Field Service – 24/7 breakdown support anywhere you need us</li>
+      </ul>
+    </section>
 
-  <!-- About Section -->
-  <section id="about" class="about">
-    <div class="about-text">
-      <h2>Strength. Precision. Reliability.</h2>
-      <p>We work with leading brands like <span class="highlight">Caterpillar, Komatsu, Hitachi</span> and more.</p>
-      <div class="about-stats">
-        <div><span>10+</span><br>Years Experience</div>
-        <div><span>50+</span><br>Projects Completed</div>
-        <div><span>24/7</span><br>Support Available</div>
-      </div>
-    </div>
-    <div class="about-image">
-      <img src="https://placehold.co/500x300/ff4500/ffffff" alt="Team in action">
-      <p class="caption">Our skilled team in action</p>
-    </div>
-  </section>
+    <section class="brands">
+      <p>
+        💪 We work with leading brands including 
+        Caterpillar, Komatsu, Hitachi, Volvo, Liebherr, Bell, JCB, and Isuzu Trucks – 
+        ensuring your machines perform at their best.
+      </p>
+      <p>📍 Based in the Northern Cape – Serving clients nationwide</p>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2>Get In Touch</h2>
-    <p>Contact us today to keep your machines working harder for longer!</p>
-    <form id="contact-form">
-      <div class="form-grid">
-        <div>
-          <label>Name</label>
-          <input type="text" placeholder="Your Name">
-        </div>
-        <div>
-          <label>Email</label>
-          <input type="email" placeholder="you@email.com">
-        </div>
-      </div>
-      <label>Message</label>
-      <textarea rows="5" placeholder="Tell us about your project..."></textarea>
-      <button type="submit" class="btn-primary">Send Message</button>
-    </form>
-    <p class="location">📍 Northern Cape | Serving clients nationwide</p>
-  </section>
+    <section class="contact">
+      <h3>📞 Contact us today to keep your machines working harder for longer!</h3>
+      <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-logo">
-        <img src="/broncoh/images/logo.png" alt="i will put the logo here" class="logo-img small">
-        <p>Your Complete Engineering Partner</p>
-      </div>
-      <div class="footer-links">
-        <a href="#">Facebook</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">Twitter</a>
-        <a href="mailto:info@broncohengineering.com">Email</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      © 2025 Broncoh Engineering. All rights reserved.
-    </div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Broncoh Engineering – <strong>Strength. Precision. Reliability.</strong></p>
   </footer>
+
+  <script src="script/broncoh.js"></script>
 </body>
 </html>

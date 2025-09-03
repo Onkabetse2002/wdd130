@@ -1,33 +1,15 @@
-// Toggle mobile menu
-function toggleMenu() {
-  const menu = document.getElementById("mobile-menu");
-  menu.classList.toggle("hidden");
-}
+// Contact form submission handler
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
 
-// Close mobile menu after clicking link
-function closeMenu() {
-  const menu = document.getElementById("mobile-menu");
-  menu.classList.add("hidden");
-}
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
 
-// Contact form handler
-function submitForm(event) {
-  event.preventDefault();
+  console.log("Form Submitted:", { name, email, message });
 
-  // Get form values
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const subject = document.getElementById("subject").value.trim();
-  const message = document.getElementById("message").value.trim();
-
-  if (!name || !email || !subject || !message) {
-    alert("⚠️ Please fill in all fields before submitting.");
-    return;
-  }
-
-  // Example success (you can connect this to backend/email API later)
-  alert(`✅ Thank you ${name}, your message has been sent!`);
+  alert("Thank you, " + name + "! Your message has been received.");
   
   // Reset form
-  document.getElementById("contact-form").reset();
-}
+  this.reset();
+});
